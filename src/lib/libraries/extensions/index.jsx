@@ -19,6 +19,11 @@ import translateInsetIconURL from './translate/translate-small.png';
 import makeymakeyIconURL from './makeymakey/makeymakey.png';
 import makeymakeyInsetIconURL from './makeymakey/makeymakey-small.svg';
 
+import koriIconURL from './kori/kori.png';
+import koriInsetIconURL from './kori/kori-small.svg';
+import koriConnectionIconURL from './kori/kori-illustration.svg';
+import koriConnectionSmallIconURL from './kori/kori-small.svg';
+
 import microbitIconURL from './microbit/microbit.png';
 import microbitInsetIconURL from './microbit/microbit-small.svg';
 import microbitConnectionIconURL from './microbit/microbit-illustration.svg';
@@ -47,6 +52,36 @@ import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
 export default [
+    {
+        name: 'Kori Assistant',
+        extensionId: 'kori',
+        collaborator: 'OpenAI',
+        iconURL: koriIconURL,
+        insetIconURL: koriInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Experiment with Generative AI."
+                description="Description for the 'kori' extension"
+                id="gui.extension.kori.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: koriConnectionIconURL,
+        connectionSmallIconURL: koriConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their kori."
+                id="gui.extension.kori.connectingMessage"
+            />
+        ),
+        helpLink: 'https://scratch.mit.edu/kori'
+    },
     {
         name: (
             <FormattedMessage
