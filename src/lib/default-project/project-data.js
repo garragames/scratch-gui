@@ -1,5 +1,6 @@
 import {defineMessages} from 'react-intl';
 import sharedMessages from '../shared-messages';
+import extensions from '../libraries/extensions';
 
 let messages = defineMessages({
     meow: {
@@ -28,90 +29,94 @@ const projectData = translateFunction => {
     const translator = translateFunction || defaultTranslator;
     return ({
         targets: [
-            {
-                isStage: true,
-                name: 'Stage',
-                variables: {
-                    '`jEk@4|i[#Fk?(8x)AV.-my variable': [
-                        translator(messages.variable),
-                        0
-                    ]
-                },
-                lists: {},
-                broadcasts: {},
-                blocks: {},
-                currentCostume: 0,
-                costumes: [
-                    {
-                        assetId: 'cd21514d0531fdffb22204e0ec5ed84a',
-                        name: translator(messages.backdrop, {index: 1}),
-                        md5ext: 'cd21514d0531fdffb22204e0ec5ed84a.svg',
-                        dataFormat: 'svg',
-                        rotationCenterX: 240,
-                        rotationCenterY: 180
-                    }
-                ],
-                sounds: [
-                    {
-                        assetId: '83a9787d4cb6f3b7632b4ddfebf74367',
-                        name: translator(messages.pop),
-                        dataFormat: 'wav',
-                        format: '',
-                        rate: 11025,
-                        sampleCount: 258,
-                        md5ext: '83a9787d4cb6f3b7632b4ddfebf74367.wav'
-                    }
-                ],
-                volume: 100
+        {
+            "isStage": true,
+            "name": "Stage",
+            "variables": {
+                "`jEk@4|i[#Fk?(8x)AV.-my variable": [
+                    "mi variable",
+                    0
+                ]
             },
-            {
-                isStage: false,
-                name: translator(messages.sprite, {index: 1}),
-                variables: {},
-                lists: {},
-                broadcasts: {},
-                blocks: {},
-                currentCostume: 0,
-                costumes: [
-                    {
-                        assetId: 'bcf454acf82e4504149f7ffe07081dbc',
-                        name: translator(messages.costume, {index: 1}),
-                        bitmapResolution: 1,
-                        md5ext: 'bcf454acf82e4504149f7ffe07081dbc.svg',
-                        dataFormat: 'svg',
-                        rotationCenterX: 48,
-                        rotationCenterY: 50
-                    },
-                    {
-                        assetId: '0fb9be3e8397c983338cb71dc84d0b25',
-                        name: translator(messages.costume, {index: 2}),
-                        bitmapResolution: 1,
-                        md5ext: '0fb9be3e8397c983338cb71dc84d0b25.svg',
-                        dataFormat: 'svg',
-                        rotationCenterX: 46,
-                        rotationCenterY: 53
-                    }
-                ],
-                sounds: [
-                    {
-                        assetId: '83c36d806dc92327b9e7049a565c6bff',
-                        name: translator(messages.meow),
-                        dataFormat: 'wav',
-                        format: '',
-                        rate: 22050,
-                        sampleCount: 18688,
-                        md5ext: '83c36d806dc92327b9e7049a565c6bff.wav'
-                    }
-                ],
-                volume: 100,
-                visible: true,
-                x: 0,
-                y: 0,
-                size: 100,
-                direction: 90,
-                draggable: false,
-                rotationStyle: 'all around'
-            }
+            "lists": {},
+            "broadcasts": {},
+            "blocks": {},
+            "comments": {},
+            "currentCostume": 0,
+            "costumes": [
+                {
+                    "name": "fondo1",
+                    "dataFormat": "svg",
+                    "assetId": "cd21514d0531fdffb22204e0ec5ed84a",
+                    "md5ext": "cd21514d0531fdffb22204e0ec5ed84a.svg",
+                    "rotationCenterX": 240,
+                    "rotationCenterY": 180
+                }
+            ],
+            "sounds": [
+                {
+                    "name": "pop",
+                    "assetId": "83a9787d4cb6f3b7632b4ddfebf74367",
+                    "dataFormat": "wav",
+                    "format": "",
+                    "rate": 44100,
+                    "sampleCount": 1032,
+                    "md5ext": "83a9787d4cb6f3b7632b4ddfebf74367.wav"
+                }
+            ],
+            "volume": 100,
+            "layerOrder": 0,
+            "tempo": 60,
+            "videoTransparency": 50,
+            "videoState": "on",
+            "textToSpeechLanguage": null
+        },
+        {
+            "isStage": false,
+            "name": "Assistant",
+            "variables": {},
+            "lists": {},
+            "broadcasts": {},
+            "blocks": {
+            },
+            "comments": {},
+            "currentCostume": 0,
+            "costumes": [
+                {
+                    "name": "Assistant",
+                    "bitmapResolution": 1,
+                    "dataFormat": "svg",
+                    "assetId": "735b5e224408fd359b0ddc55f32c6b30",
+                    "md5ext": "735b5e224408fd359b0ddc55f32c6b30.svg",
+                    "rotationCenterX": 42.5,
+                    "rotationCenterY": 42.5
+                }
+            ],
+            "sounds": [
+                {
+                    "name": "pop",
+                    "assetId": "83a9787d4cb6f3b7632b4ddfebf74367",
+                    "dataFormat": "wav",
+                    "format": "",
+                    "rate": 44100,
+                    "sampleCount": 1032,
+                    "md5ext": "83a9787d4cb6f3b7632b4ddfebf74367.wav"
+                }
+            ],
+            "volume": 100,
+            "layerOrder": 1,
+            "visible": true,
+            "x": 0,
+            "y": 0,
+            "size": 100,
+            "direction": 90,
+            "draggable": false,
+            "rotationStyle": "all around"
+        }
+        ],
+        monitors: [],
+        extensions: [
+            "kori"
         ],
         meta: {
             semver: '3.0.0',
